@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/4-3_문자열처리함수.iml" filepath="$PROJECT_DIR$/.idea/4-3_문자열처리함수.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../4-4_문자열포멧/.idea/4-4_문자열포멧.iml" filepath="$PROJECT_DIR$/../4-4_문자열포멧/.idea/4-4_문자열포멧.iml" />
     </modules>
   </component>
 </project>
