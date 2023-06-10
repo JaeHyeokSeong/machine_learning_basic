@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
 
 dataset = pd.read_csv("LogisticRegressionData.csv")
 # 독립 변수
@@ -53,3 +54,22 @@ plt.title("Probability by Hours")
 plt.xlabel("hours")
 plt.ylabel("Pass Probability")
 plt.show()
+
+# 혼동 행렬 (Confusion Matrix)
+cm = confusion_matrix(y_test, y_pred)
+
+# [cm 출력 형태]
+# True Negative    False Positive
+# 불합격일거야 (예측)   합격일거야 (예측)
+# 불합격     (실제)   불합격    (실제)
+
+# False Negative   True Positive
+# 불합격일거야 (예측)   합격일거야 (예측)
+# 합격      (실제)   합격      (실제)
+
+# |------|
+# | 1  2 |   [cm 출력 형태에서 위치 1, 4 는 정확하게 예측한 수를 의미하는
+# | 3  4 |   것 이고 위치 2, 3 은 부정확하게 예측한 것을 의미하는 것이다.]
+# |------|
+
+print(cm)
